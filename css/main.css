@@ -4,18 +4,19 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f2f6f9; /* Gris clair */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dégradé sombre */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #ecf0f1; /* Texte clair sur fond sombre */
     animation: fadeIn 1.5s ease-out;
 }
 
 /* Titre principal */
 h1 {
     text-align: center;
-    color: #4A90E2; /* Bleu doux */
+    color: #ecf0f1; /* Blanc cassé */
     font-size: 2.5em;
     margin-bottom: 30px;
     animation: slideInFromTop 1s ease-out;
@@ -25,10 +26,10 @@ h1 {
 form {
     margin-bottom: 20px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #2c3e50; /* Fond sombre pour le formulaire */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre douce */
     animation: slideUp 1s ease-out;
 }
 
@@ -38,21 +39,22 @@ input[type="search"], input[type="range"] {
     margin: 10px 0;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
+    border: 1px solid #7f8c8d; /* Gris clair */
+    background-color: #34495e; /* Gris foncé */
+    color: #ecf0f1;
     font-size: 1em;
     transition: all 0.3s ease;
 }
 
 input[type="search"]:focus, input[type="range"]:focus {
-    border-color: #4A90E2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+    border-color: #e74c3c; /* Rouge lumineux pour le focus */
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.6);
 }
 
 /* Bouton de recherche */
 button {
     padding: 12px 25px;
-    background-color: #50E3C2; /* Vert menthe */
+    background-color: #e74c3c; /* Rouge vif */
     color: white;
     border: none;
     border-radius: 8px;
@@ -62,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: #48C8B8; /* Couleur vert menthe plus foncé */
+    background-color: #c0392b; /* Rouge plus foncé */
     transform: scale(1.05);
 }
 
@@ -81,26 +83,26 @@ button:active {
 
 /* Élément de la liste des cinémas */
 #cinema-list li {
-    background-color: #ffffff;
+    background-color: #34495e; /* Gris foncé pour les items */
     margin: 10px 0;
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    border: 1px solid #7f8c8d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Ombre douce */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #cinema-list li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 #cinema-list li:nth-child(odd) {
-    background-color: #f9f9f9;
+    background-color: #2c3e50; /* Un fond plus sombre pour les éléments impairs */
 }
 
 #cinema-list li:nth-child(even) {
-    background-color: #f2f6f9;
+    background-color: #34495e; /* Un fond plus clair pour les éléments pairs */
 }
 
 /* Message d'erreur */
