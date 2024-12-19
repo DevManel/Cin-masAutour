@@ -1,6 +1,5 @@
 // Fonction pour récupérer les cinémas proches d'une adresse via l'API des cinémas
 async function getCinemasNearby(latitude, longitude, distance) {
-    // Construire l'URL avec les coordonnées de l'utilisateur et le rayon sélectionné
     const url = `https://data.culture.gouv.fr/api/explore/v2.1/catalog/datasets/etablissements-cinematographiques/records?where=within_distance(geolocalisation%2C%20geom%27POINT(${longitude}%20${latitude})%27%2C%20${distance}km)&limit=20`;
 
     try {
@@ -28,12 +27,12 @@ async function getCinemasNearby(latitude, longitude, distance) {
 
 // Fonction pour calculer la distance entre deux points GPS
 function calculateDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Rayon de la Terre en km
+    const R = 6371;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
               Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
               Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Distance en km
+    return R * c;
 }

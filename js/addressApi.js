@@ -9,8 +9,8 @@ async function getCoordinatesFromAddress(address) {
         // Vérifier si des résultats sont trouvés
         if (data.features && data.features.length > 0) {
             const coordinates = data.features[0].geometry.coordinates;
-            const latitude = coordinates[1]; // latitude est le 2ème élément
-            const longitude = coordinates[0]; // longitude est le 1er élément
+            const latitude = coordinates[1];
+            const longitude = coordinates[0];
 
             return { latitude, longitude };
         } else {
@@ -32,7 +32,7 @@ async function getAddressFromCoordinates(latitude, longitude) {
 
         // Vérifier si des résultats sont trouvés
         if (data.features && data.features.length > 0) {
-            return data.features[0].properties.label; // Retourne l'adresse complète
+            return data.features[0].properties.label;
         } else {
             throw new Error("Adresse non trouvée.");
         }
