@@ -1,0 +1,127 @@
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f4f4f9;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* Formulaire de recherche */
+form {
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
+}
+
+input[type="search"], input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+/* Bouton de recherche */
+button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Affichage des résultats */
+#cinema-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Élément de la liste des cinémas */
+#cinema-list li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cinema-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Message d'erreur */
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Animation fadeIn pour les éléments */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation de slideIn pour le titre */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation de slideUp pour le formulaire */
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
